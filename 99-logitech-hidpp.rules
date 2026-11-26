@@ -1,0 +1,4 @@
+# Allow logged-in users direct hidraw access to Logitech G mice and LIGHTSPEED receivers.
+# Install to /etc/udev/rules.d/99-logitech-hidpp.rules and reload with:
+#   sudo udevadm control --reload-rules && sudo udevadm trigger
+KERNEL=="hidraw*", ATTRS{idVendor}=="046d", MODE="0660", TAG+="uaccess"
