@@ -1,0 +1,13 @@
+[package]
+name = "logihub"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+
+[dependencies]
+hidpp = { path = "../hidpp" }
+clap = { version = "4", features = ["derive"] }
+eframe = { version = "0.31", default-features = false, features = ["default_fonts", "glow", "wayland", "x11"] }
+egui = "0.31"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
